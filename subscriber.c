@@ -18,7 +18,7 @@
  * single character is 5 characters long
  */
 
-#define MORSE_ENABLE                false  //Deactivates blinking the LED if you dont have all day
+#define MORSE_ENABLE                true  //Deactivates blinking the LED if you dont have all day
                                             //You can change the blink delay in morse.c
 
 #define START_UP_MESSAGE_ENABLE     false    //Activate if you want to test the OLED display
