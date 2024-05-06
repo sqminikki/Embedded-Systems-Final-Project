@@ -41,12 +41,12 @@ endif()
 # Set variables for the library names
 set(SSD1306_LIB ssd1306)
 set(BMP280_LIB bmp280)
-
+set(MORSE_LIB morse)
 
 # Add a static library for C
 add_library(${SSD1306_LIB} STATIC ssd1306.c linux_i2c.c)
 add_library(${BMP280_LIB} STATIC bmp280_i2c.c)
-
+add_library(${MORSE_LIB} STATIC morse.c blink.c)
 
 # Add executables
 add_executable(subscriber subscriber.c)

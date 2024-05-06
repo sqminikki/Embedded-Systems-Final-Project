@@ -336,7 +336,7 @@ void system_init(){
     bmp280_i2c_init();
     
     /*Settting the i2c channel for the OLED display*/
-    uint8_t i2c_node_address = 0;
+    uint8_t i2c_node_address = 1;
 
     /*Initializing the OLED Display*/
     ssd1306_system_init(i2c_node_address);
@@ -393,7 +393,7 @@ int main(int argc, char *argv[])
     mosquitto_message_callback_set(mosq, message_callback);
 
     // Connect to an MQTT broker
-    if (mosquitto_connect(mosq, "104.236.198.67", 1883, 60) != MOSQ_ERR_SUCCESS)
+    if (mosquitto_connect(mosq, "localhost", 1883, 60) != MOSQ_ERR_SUCCESS)
     {
         fprintf(stderr, "Could not connect to broker\n");
         exit(-1);
