@@ -16,7 +16,7 @@ void publish_message(struct mosquitto *mosq, const char *topic, const char *mess
 int main(int argc, char *argv[])
 {
     struct mosquitto *mosq;
-    char *topic = "test/topic";
+    char *topic = "cpe4953/spring2024/group3";
     const char *json_string;
 
     // Initialize the Mosquitto library
